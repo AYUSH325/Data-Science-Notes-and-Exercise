@@ -1,0 +1,58 @@
+Overview in Machine Learning - Supervised Learning:
+
+1. Data Acquisition - Aquiring datsets from customers, database, or data from sensors
+2. Data Cleansing - Clean and format data using libraris like Pandas
+3. Split data to Test and Training data
+4. Use the specific training data on our network or model in order to fit a model
+    to that data
+5. Model Testing with test data
+6. Deploy Model
+
+Data is often split into 3 types, we have training data, validation data
+and Test Data
+We use the validation data to test more and go back adjust the parameters / add more
+layers/neurons
+Once we are done modifying and adjusting the model, we use the ML model to
+test on the test data and get final performance meteric, at this point, there 
+is no going back to adjust since we test the model on real world data and
+this is final test set and we label it as the true performace of model on
+unseen data.
+
+Model Evaluations: 
+1.Accuracy of a model = number of correct predictions / total no. of predictions
+                    expressed as %.
+Accuracy is not good for unbalanced classes, for eg: for a model predicting
+dog and cat from an image, if 99% of the datasets is dogs
+
+For unbalanced classes:
+2. Recall = ability of a model to find all relevant cases within datasets
+            Number of true positives / (Number of true positives + number
+                                        of false negatives)
+3. Precision =  ability of a classification model to identify only relevant
+                data points
+                number of true positives / (number of true positives + number
+                of false positives)  
+
+4. F1 score = In cases where we want to find an optimal blend of precision
+                and recall we can combine the two metrics using F1 score.
+                it is the harmonic mean (not simple average) of both precision and recall.
+               F1 = 2* (precision * recall)/(precision + recall)
+
+                                 
+Often we will have precision/recall trade off, with unbalanced classes (data), we need
+to choose if the model should minimize false negetives or false positives.
+For something such as disease diagnostics, we have to minimize false negetives so
+that they don't go home sick.
+
+Different metrics we can use for evaluating performance of regression task:
+
+An example of a regression task would be prediction of real estate prices
+1. Absolute mean error
+2. Mean squared error
+3. Root mean square error (best metric)
+
+- Sckit Learn
+Every algorithm is exposed to sciket-learn via an "Estimator"
+Import Model: from sklearn.family import Model
+Estimator parameters: All the parameters of an estimator can be 
+set when it is instantiated, to tune the model, and have suitable default values.
